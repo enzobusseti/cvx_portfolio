@@ -23,11 +23,8 @@ maintainers = [{name = "Enzo Busseti", email = "enzo.busseti@gmail.com"}]
 # their versions of dependencies work correctly. Please do report bugs coming
 # from some combination of dependency versions that break Cvxportfolio code.
 
-dependencies = ["pandas",
-    # July 2024, Numpy 2 causes issues with CVXPY's conic interface on Py 3.12
-    "numpy; python_version<'3.12'",
-    "numpy<2.0.0; python_version>='3.12'",
-    "matplotlib", "requests", "cvxpy",
+dependencies = [
+    "pandas", "numpy", "matplotlib", "requests", "cvxpy",
     # "multiprocess", # robustifies usage w/ 3rd party modules, used if installed
     "scs" # it's hardcoded as fallback solver if numerical errors
     ]
